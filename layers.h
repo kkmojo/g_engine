@@ -1,7 +1,9 @@
 #ifndef LAYERS_H
 #define LAYERS_H
 
-class layers
+#include"canvas.h"
+
+class layers:public Canvas
 {
 public:
     layers();

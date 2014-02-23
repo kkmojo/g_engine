@@ -12,7 +12,14 @@ TARGET = g_engine
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    canvas.cpp \
+    staticbg.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += \
+    canvas.h \
+    ../layer.h \
+    staticbg.h
+
+RESOURCES += \
+    game.qrc
