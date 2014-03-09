@@ -16,6 +16,7 @@ public:
 protected:
     void paintEvent(QPaintEvent *event);
     void update(QPainter *qp);
+    //Attemtp to push
 };
 
 #endif // CANVAS_H

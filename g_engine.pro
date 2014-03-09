@@ -14,12 +14,18 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     canvas.cpp \
-    staticbg.cpp
+    gamethread.cpp \
+    spirit.cpp \
+    block.cpp \
+    ball.cpp
 
 HEADERS  += \
     canvas.h \
     ../layer.h \
-    staticbg.h
+    gamethread.h \
+    spirit.h \
+    block.h \
+    ball.h
 
 RESOURCES += \
     game.qrc
