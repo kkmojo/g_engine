@@ -16,12 +16,12 @@ void GameThread::run()
     {
         if(!pause)
         {
-            c->update();
+           // c->update();
             emit newFrameComes();
         }
         this->msleep(1000.0/60);
-    {
-     qDebug()<<"finish!";
+    }
+     qDebug() << "finish!";
      finish = true;
 }
 

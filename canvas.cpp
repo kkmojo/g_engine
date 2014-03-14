@@ -11,8 +11,9 @@ void Canvas::paintEvent(QPaintEvent *event){
 
 void Canvas::update(QPainter *qp){
     // write draw program here
-    StaticBG staticbackground;
-    staticbackground.draw(qp);
+    //StaticBG staticbackground;
+    //staticbackground.draw(qp);
+    ball.render(*qp);
 
 
 }

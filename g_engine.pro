@@ -17,7 +17,8 @@ SOURCES += main.cpp \
     gamethread.cpp \
     spirit.cpp \
     block.cpp \
-    ball.cpp
+    ball.cpp \
+    gameobject.cpp
 
 HEADERS  += \
     canvas.h \
@@ -25,7 +26,8 @@ HEADERS  += \
     gamethread.h \
     spirit.h \
     block.h \
-    ball.h
+    ball.h \
+    gameobject.h
 
 RESOURCES += \
     game.qrc

@@ -1,10 +1,17 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
-class block
+#include "gameobject.h"
+
+class Block:public GameObject
 {
 public:
-    block();
+    Block();
+    ~Block();
+    void render(QPainter &painter);
+    void update();
+    QRect getBoundingBox();
+
 };
 
 #endif // BLOCK_H

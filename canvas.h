@@ -6,6 +6,7 @@
 #include <QColor>
 #include <QBrush>
 #include <staticbg.h>
+#include "ball.h"
 
 class Canvas : public QWidget
 {
@@ -17,6 +18,9 @@ protected:
     void paintEvent(QPaintEvent *event);
     void update(QPainter *qp);
     //Attemtp to push
+
+private:
+    Ball ball;
 };
 
 #endif // CANVAS_H

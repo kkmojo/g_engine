@@ -16,7 +16,7 @@ signals:
     void newFrameComes();
 
 public slots:
-    void quitGmae();
+    void quitGame();
     void pauseGame();
 
 private:
