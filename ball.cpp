@@ -15,8 +15,8 @@ Ball::~Ball()
 void Ball::render(QPainter &painter)
 {
 
-    //QPen pen(color, 2);
-    //painter.setPen(pen);
+    QPen pen(color, 2);
+    painter.setPen(pen);
     painter.setBrush(brush);
     painter.drawEllipse(initPosition,RectW,RectH);
     //painter.fillRect(rectangle,color);

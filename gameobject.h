@@ -22,6 +22,9 @@ protected:
     int y;
     int width;
     int height;
+    QBrush brush;
+    QColor color;
+    QPoint initPosition;
 
 };
 

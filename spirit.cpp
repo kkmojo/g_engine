@@ -1,6 +1,10 @@
 #include "spirit.h"
 
-
+Spirit::Spirit()
+{
+    color = QColor(RED,GREEN,BLUE);
+    brush = QBrush(color);
+}
 
 Spirit::Spirit(int x, int y)
 {
@@ -29,7 +33,10 @@ Spirit:: ~Spirit()
 
 void Spirit :: render(QPainter &painter)
 {
-
+    QPen pen(color, 2);
+    painter.setPen(pen);
+    painter.setBrush(brush);
+    painter.drawRect(RectX,RectY,RectW,RectH);
 }
 
 void Spirit :: onKeyPress(QKeyEvent *event)
@@ -49,5 +56,6 @@ void Spirit ::onIntersect(GameObject *obj, int direction)
 
 QRect Spirit :: getBoundingBox()
 {
-    return QRect();
+    QRect box (x,y,width,height);
+    return box;
 }

@@ -7,6 +7,9 @@
 #include <QBrush>
 #include <staticbg.h>
 #include "ball.h"
+#include "spirit.h"
+#include "block.h"
+#include "staticbg.h"
 
 class Canvas : public QWidget
 {
@@ -21,6 +24,9 @@ protected:
 
 private:
     Ball ball;
+    Spirit spirit;
+    StaticBG background;
+
 };
 
 #endif // CANVAS_H

@@ -14,13 +14,10 @@ public:
     QRect getBoundingBox();
 
 private:
-    QPoint initPosition;
-    QBrush brush;
-    QColor color;
     const static int RectX = 0;
     const static int RectY = 0;
-    const static int RectW = 10;
-    const static int RectH = 10;
+    const static int RectW = 7;
+    const static int RectH = 7;
     const static int RED = 0;
     const static int GREEN = 255;
     const static int BLUE = 0;

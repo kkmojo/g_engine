@@ -14,6 +14,7 @@ void Canvas::update(QPainter *qp){
     //StaticBG staticbackground;
     //staticbackground.draw(qp);
     ball.render(*qp);
-
+    spirit.render(*qp);
+    background.draw(*qp);
 
 }

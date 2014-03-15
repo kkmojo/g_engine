@@ -2,12 +2,11 @@
 
 StaticBG::StaticBG()
 {
-bool load=StaticBG.load(":/game/1.png");
+    bool load = image.load(":/SBG/1.png");
 }
 
-StaticBG::draw(QPainter *device)
+void StaticBG::draw(QPainter &painter)
 {
-    QRect size(0,0,640,480);
-
-    device->drawImage(size,StaticBG);
+   image = image.scaled(640,480);
+   painter.drawImage(0,0,image);
 }
