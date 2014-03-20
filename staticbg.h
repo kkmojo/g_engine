@@ -1,17 +1,18 @@
 #ifndef STATICBG_H
 #define STATICBG_H
 
-#include<QWidget>
-#include<QImage>
+#include <QWidget>
+#include <QImage>
+#include <QPainter>
 
-class StaticBG
+class StaticBG//:public QWidget
 {
 private:
     QImage image;
 
 public:
     StaticBG();
-    void draw(QPainter &painter);
+    void paintEvent(QPainter *p);
 };
 
 #endif // STATICBG_H

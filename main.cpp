@@ -18,8 +18,9 @@ int main(int argc, char *argv[])
     c.show();
     t.start();
 
-    QObject::connect(&t, SIGNAL(newFrameComes()),&c,SLOT(repaint()));
-    QObject::connect(&a,SIGNAL(abouToQuit()),&t,SLOT(quitGame()));
+
+    QObject::connect(&t, SIGNAL(newFrameComes()), &c, SLOT(repaint()));
+    QObject::connect(&a, SIGNAL(abouToQuit()), &t, SLOT(quitGame()));
 
 
     return a.exec();

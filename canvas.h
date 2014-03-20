@@ -5,6 +5,7 @@
 #include <QPainter>
 #include <QColor>
 #include <QBrush>
+#include <QDebug>
 #include <staticbg.h>
 #include "ball.h"
 #include "spirit.h"
@@ -16,16 +17,23 @@ class Canvas : public QWidget
     Q_OBJECT
 public:
     explicit Canvas(QWidget *parent = 0);
+    ~Canvas();
+    const static int V_COUNT = 10;
+    const static int H_COUNT = 5;
 
 protected:
     void paintEvent(QPaintEvent *event);
     void update(QPainter *qp);
+    void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
     //Attemtp to push
 
 private:
     Ball ball;
     Spirit spirit;
     StaticBG background;
+    Block **block;
+
 
 };
 

@@ -1,7 +1,9 @@
 #include "block.h"
 
-Block :: Block()
+Block :: Block(int x, int y) : GameObject(x, y, RectW,RectH)
 {
+    color = QColor(RED,GREEN,BLUE);
+    brush = QBrush(color);
 }
 
 Block :: ~Block()
@@ -10,7 +12,8 @@ Block :: ~Block()
 }
 void Block :: render(QPainter &painter)
 {
-
+    painter.setBrush(brush);
+    painter.drawRect(x,y,width,height);
 }
 
 void Block :: update()
@@ -20,5 +23,6 @@ void Block :: update()
 
 QRect Block :: getBoundingBox()
 {
- return QRect();
+    QRect box (x,y,width,height);
+    return box;
 }

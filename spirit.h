@@ -9,19 +9,15 @@ class Spirit : public GameObject
 {
 
 private:
-    int x;
-    int y;
-    int direction;
-    const static int LEFT = 1;
-    const static int RIGHT = 2;
     const static int SPEED = 10;
     const static int RED = 200;
     const static int GREEN = 0;
     const static int BLUE = 0;
-    const static int RectX = 290;
-    const static int RectY = 405;
-    const static int RectW = 30;
-    const static int RectH = 5;
+    const static int RectY = 470;
+    const static int RectW = 60;
+    const static int RectH = 6;
+    bool isLeft = false;
+    bool isRight = false;
 
 public:
     Spirit();
