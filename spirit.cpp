@@ -9,6 +9,8 @@ Spirit::Spirit()
     y = RectY;
     width = RectW;
     height = RectH;
+    isLeft = false;
+    isRight = false;
 }
 
 Spirit::Spirit(int x, int y)

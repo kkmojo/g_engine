@@ -2,6 +2,8 @@
 #define BALL_H
 
 #include "gameobject.h"
+#include "block.h"
+#include "spirit.h"
 
 
 class Ball:public GameObject
@@ -12,6 +14,8 @@ public:
     void render(QPainter &painter);
     void update();
     QRect getBoundingBox();
+    void setBlockArray(Block **blocks);
+    void setSpirit(Spirit *spirit);
 
 private:
     const static int RectW = 14;
@@ -25,6 +29,9 @@ private:
     double xSpeed;
     double ySpeed;
     double angle;
+    Block **blockArray;
+    Spirit *s;
+
 
 
 };

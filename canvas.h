@@ -19,7 +19,7 @@ public:
     explicit Canvas(QWidget *parent = 0);
     ~Canvas();
     const static int V_COUNT = 10;
-    const static int H_COUNT = 5;
+    const static int H_COUNT = 8;
 
 protected:
     void paintEvent(QPaintEvent *event);

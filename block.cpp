@@ -26,3 +26,11 @@ QRect Block :: getBoundingBox()
     QRect box (x,y,width,height);
     return box;
 }
+
+void Block::remove()
+{
+    x = -1000;
+    y = -1000;
+    width = 0;
+    height = 0;
+}

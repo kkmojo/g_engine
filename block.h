@@ -19,7 +19,9 @@ public:
     ~Block();
     void render(QPainter &painter);
     void update();
+    void remove();
     QRect getBoundingBox();
+
 
 };
 

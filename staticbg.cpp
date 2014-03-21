@@ -8,6 +8,5 @@ StaticBG::StaticBG()
 
 void StaticBG::paintEvent(QPainter *p)
 {
-   //p->drawImage(0,0,image);
    p->drawImage(0,0,image);
 }

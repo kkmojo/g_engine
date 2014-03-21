@@ -1,19 +1,28 @@
 #include "canvas.h"
 
-Canvas::Canvas(QWidget *parent) : QWidget(parent){
+Canvas::Canvas(QWidget *parent) : QWidget(parent)
+{
 
     block = new Block*[V_COUNT * H_COUNT];
 
-    for (int i = 0; i < H_COUNT; i++){
-        for(int j = 0; j < V_COUNT; j++){
+    for (int i = 0; i < H_COUNT; i++)
+    {
+        for(int j = 0; j < V_COUNT; j++)
+        {
             // construct blocks
             int x = 0 + Block::WIDTH * j;
             int y = 0 + Block::HEIGHT * i;
 
             block[i * V_COUNT + j] = new Block(x, y);
+
         }
     }
+    ball.setBlockArray(block);
+    ball.setSpirit(&spirit);
+
 }
+
+
 
 Canvas::~Canvas(){
 
@@ -47,6 +56,14 @@ void Canvas::update(QPainter *qp){
     ball.render(*qp);
     spirit.update();
     spirit.render(*qp);
+
+    int score = 10;
+    int textX = 300;
+    int textY = 300;
+    QString s = QString::number(score);
+    qp->setPen(Qt::black);
+    qp->drawText(textX, textY, s);
+
 
     /*CANVAS_WIDTH;
     SPIRIT_WIDTH;

@@ -13,11 +13,11 @@ private:
     const static int RED = 200;
     const static int GREEN = 0;
     const static int BLUE = 0;
-    const static int RectY = 470;
+    const static int RectY = 450;
     const static int RectW = 60;
     const static int RectH = 6;
-    bool isLeft = false;
-    bool isRight = false;
+    bool isLeft;
+    bool isRight;
 
 public:
     Spirit();
