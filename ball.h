@@ -4,6 +4,7 @@
 #include "gameobject.h"
 #include "block.h"
 #include "spirit.h"
+#include "score.h"
 
 
 class Ball:public GameObject
@@ -16,6 +17,7 @@ public:
     QRect getBoundingBox();
     void setBlockArray(Block **blocks);
     void setSpirit(Spirit *spirit);
+    int score;
 
 private:
     const static int RectW = 14;
@@ -25,7 +27,7 @@ private:
     const static int BLUE = 0;
     const static int initX = 320;
     const static int initY = 400;
-    const static int SPEED = 5;
+    const static int SPEED = 10;
     double xSpeed;
     double ySpeed;
     double angle;

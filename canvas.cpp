@@ -19,6 +19,7 @@ Canvas::Canvas(QWidget *parent) : QWidget(parent)
     }
     ball.setBlockArray(block);
     ball.setSpirit(&spirit);
+    score.setScore(ball.score);
 
 }
 
@@ -56,13 +57,8 @@ void Canvas::update(QPainter *qp){
     ball.render(*qp);
     spirit.update();
     spirit.render(*qp);
-
-    int score = 10;
-    int textX = 300;
-    int textY = 300;
-    QString s = QString::number(score);
-    qp->setPen(Qt::black);
-    qp->drawText(textX, textY, s);
+    score.setScore(ball.score);
+    score.display(qp);
 
 
     /*CANVAS_WIDTH;

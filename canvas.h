@@ -11,6 +11,7 @@
 #include "spirit.h"
 #include "block.h"
 #include "staticbg.h"
+#include "score.h"
 
 class Canvas : public QWidget
 {
@@ -33,6 +34,7 @@ private:
     Spirit spirit;
     StaticBG background;
     Block **block;
+    Score score;
 
 
 };

@@ -14,6 +14,7 @@ Ball::Ball()
     height = RectH;
     xSpeed = cos(angle) * SPEED;
     ySpeed = sin(angle) * SPEED;
+    score = 0;
 
 }
 
@@ -47,7 +48,7 @@ void Ball::update()
     y -= ySpeed;
     // TODO: game over check
     //if(y >= 480){
-        // gameover();
+    // gameover();
     //}
 
     QRect ballBB = this->getBoundingBox();
@@ -55,13 +56,18 @@ void Ball::update()
 
     if(x <= 0 || x >= 640 - RectW)
     {
-        xSpeed = -xSpeed;
+        angle += 5;
+        xSpeed = -cos(angle) * SPEED;
+        ySpeed = -sin(angle) * SPEED;
+
     }
 
 
-    if(y <= 0)
+    if(y <= 0 || y >= 480 - RectH)
     {
-        ySpeed = -ySpeed;
+        angle += 5;
+        xSpeed = -cos(angle) * SPEED;
+        ySpeed = -sin(angle) * SPEED;
     }
 
     for (int i = 0; i < Canvas::H_COUNT * Canvas::V_COUNT; i++)
@@ -70,6 +76,7 @@ void Ball::update()
         if(blockBB.intersects(ballBB))
         {
             blockArray[i]->remove();
+            score++;
             if(ballBB.x() < blockBB.x() )
             {
                 xSpeed = -fabs(xSpeed);
@@ -103,6 +110,9 @@ void Ball::update()
         {
             ySpeed = fabs(ySpeed);
         }
+        angle += 5;
+        xSpeed = cos(angle) * SPEED;
+        ySpeed = sin(angle) * SPEED;
     }
 }
 
