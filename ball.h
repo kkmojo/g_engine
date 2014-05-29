@@ -27,7 +27,7 @@ private:
     const static int BLUE = 0;
     const static int initX = 320;
     const static int initY = 400;
-    const static int SPEED = 10;
+    const static int SPEED = 5;
     double xSpeed;
     double ySpeed;
     double angle;

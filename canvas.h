@@ -35,8 +35,7 @@ private:
     StaticBG background;
     Block **block;
     Score score;
-
-
+    QVector<GameObject> objs;
 };
 
 #endif // CANVAS_H

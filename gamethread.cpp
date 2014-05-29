@@ -16,20 +16,20 @@ void GameThread::run()
     {
         if(!pause)
         {
-           // c->update();
+            // c->update();
             emit newFrameComes();
         }
         this->msleep(1000.0/60);
     }
-     qDebug() << "finish!";
-     finish = true;
+    qDebug() << "finish!";
+    finish = true;
 }
 
 void GameThread::quitGame()
 {
-  qDebug() << "quit game";
-  running = false;
-  while(!finish);
+    qDebug() << "quit game";
+    running = false;
+    while(!finish);
 }
 
 void GameThread::pauseGame()

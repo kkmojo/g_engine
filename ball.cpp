@@ -56,18 +56,14 @@ void Ball::update()
 
     if(x <= 0 || x >= 640 - RectW)
     {
-        angle += 5;
-        xSpeed = -cos(angle) * SPEED;
-        ySpeed = -sin(angle) * SPEED;
+        xSpeed = -xSpeed;
 
     }
 
 
     if(y <= 0 || y >= 480 - RectH)
     {
-        angle += 5;
-        xSpeed = -cos(angle) * SPEED;
-        ySpeed = -sin(angle) * SPEED;
+        ySpeed = -ySpeed;
     }
 
     for (int i = 0; i < Canvas::H_COUNT * Canvas::V_COUNT; i++)
@@ -110,9 +106,7 @@ void Ball::update()
         {
             ySpeed = fabs(ySpeed);
         }
-        angle += 5;
-        xSpeed = cos(angle) * SPEED;
-        ySpeed = sin(angle) * SPEED;
+
     }
 }
 

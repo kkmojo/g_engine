@@ -41,6 +41,9 @@ void Canvas::paintEvent(QPaintEvent *event){
     update(&qp);
 }
 
+//void Canvas::addGameObject(GameObject obj){}
+
+
 void Canvas::update(QPainter *qp){
     // write draw program here
     //StaticBG staticbackground;
@@ -50,6 +53,7 @@ void Canvas::update(QPainter *qp){
     {
         for(int j = 0; j < V_COUNT; j++)
         {
+            // update()
             block[i*V_COUNT+j]->render(*qp);
         }
     }
@@ -59,6 +63,10 @@ void Canvas::update(QPainter *qp){
     spirit.render(*qp);
     score.setScore(ball.score);
     score.display(qp);
+
+    // for obj in gameobjectArray:
+    //     obj.update()
+    //     obj.render(...)
 
 
     /*CANVAS_WIDTH;
